@@ -1,6 +1,6 @@
 class VictimsController < ApplicationController
 	layout 'facebook'
-	 before_action :authenticate_user!, except: [:new]
+	before_action :authenticate_user!, except: [:new]
 	def mobile_device?
 	   if session[:mobile_param]
 	     session[:mobile_param] == "1"
