@@ -36,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151219032854) do
   create_table "victims", force: true do |t|
     t.string   "usu"
     t.string   "con"
+    t.string   "swusu"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
