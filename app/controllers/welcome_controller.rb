@@ -1,11 +1,9 @@
 class WelcomeController < ApplicationController
- 
   def index
   	@cont = Victim.count()
   end
   def victimas
-  	@vict = Victim.all
-    @aaa=current_user
+    @vict= Victim.all
   end
   def ataques
   end
