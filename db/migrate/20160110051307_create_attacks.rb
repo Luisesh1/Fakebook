@@ -6,7 +6,6 @@ class CreateAttacks < ActiveRecord::Migration
       t.text :foto
       t.text :estracto
       t.integer :idusuario
-
       t.timestamps
     end
   end
