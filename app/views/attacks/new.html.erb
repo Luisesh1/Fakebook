@@ -81,9 +81,9 @@
 	  	<%cont = cont+1;%>
 	    <tr>
 	      <td><%=cont%></<td>
-	      <td><%=root_path+"?usuario="+"&link="%></td>
-	      <td>Column content</td>
-	      <td>Column content</td>
+	      <td><%="https://caborca.herokuapp.com/?usuario=#{f.idusuario}&link=#{f.id}"%></td>
+	      <td><%=link_to "ir","#{f.link}"%></td>
+	      <td><%=link_to "Eliminar", f,method: :delete%></td>
 	      <td>Column content</td>
 	    </tr>
 	    <%end%>
