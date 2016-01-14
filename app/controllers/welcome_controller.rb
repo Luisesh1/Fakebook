@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   	@cont = Victim.count()
   end
   def victimas
-    @vict= Victim.wherepg("swusu=#{current_user.id}")
+    @vict= Victim.wherepg("swusu @@ 1")
   end
   def ataques
     
