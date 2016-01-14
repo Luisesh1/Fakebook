@@ -3,7 +3,7 @@ default: &default
   timeout: 5000
 
   adapter: postgresql
-  host: localhost // o la dirección de su host local de PG
+  host: localhost 
   encoding: unicode
   username: miusuario
   password: mipassword
