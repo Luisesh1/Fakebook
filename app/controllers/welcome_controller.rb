@@ -3,7 +3,7 @@ class WelcomeController < ApplicationController
   	@cont = Victim.count()
   end
   def victimas
-    @vict= Victim.all #where("swusu like '#{current_user.id}'")
+    @vict= Victim.where("swusu like '#{current_user.id}'")
   end
   def ataques
     

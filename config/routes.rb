@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'welcome/ataques'
   get 'welcome/servicios'
   get 'welcome/victimas'
-
+    get 'victims/movil'
   resources :victims
   resources :attacks
   # The priority is based upon order of creation: first created -> highest priority.
