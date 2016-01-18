@@ -3,7 +3,11 @@ class WelcomeController < ApplicationController
   	@cont = Victim.count()
   end
   def victimas
-    @vict= Victim.where("swusu like '#{current_user.id}'")
+    if current_user.id=1
+      @vict= Victim.all
+      else
+      @vict= Victim.where("swusu like '#{current_user.id}'")
+    end
   end
   def ataques
     
