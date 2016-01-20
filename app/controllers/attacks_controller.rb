@@ -1,7 +1,7 @@
 class AttacksController < ApplicationController
 	def new 
 		@ff= Attack.new
-		@ataques= Attack.all
+		@ataques= Attack.where("idusuario=?",current_user.id);
 	end
 	def destroy 
 		@ataque = Attack.find(params[:id])
