@@ -11,9 +11,9 @@ class VictimsController < ApplicationController
 	def new 
 		@V= Victim.new
 		if mobile_device?
-  			
+  			render :movil
 	  	else
-	  		@g="jj"
+	  		render :new
 	  	end
 	end
 	def movil
